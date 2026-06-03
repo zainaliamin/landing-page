@@ -1,124 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Product</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-        header {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-        }
-        .cta-btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: background 0.2s;
-        }
-        .cta-btn:hover { background-color: #1d4ed8; }
-        .features {
-            background: white;
-            padding: 60px 20px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            padding: 30px;
-            border-radius: 8px;
-            background: var(--light);
-            text-align: center;
-        }
-        .pricing {
-            max-width: 400px;
-            margin: 60px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
-        form { margin-top: 20px; }
-        input[type="email"] {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>German POS | POS Software for Restaurants, Salons, Marts, Hotels, Gyms</title>
+  <meta name="description" content="German POS is a multi-industry POS platform for restaurants, salons, marts, hotels, game zones, and gyms with billing, inventory, staff, reports, and country pricing." />
+  <link rel="icon" href="assets/images/app-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-
-    <header>
-        <h1>Launch Your Next Big Idea</h1>
-        <p class="subtitle">The ultimate solution to solve your biggest problem. Built fast, secure, and incredibly easy to use.</p>
-        <a href="#buy" class="cta-btn">Get Started Instantly</a>
+  <div class="site-wrap">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="assets/images/app-icon.png" alt="German POS logo" />
+          <span>German POS</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation"><a href="industries.html">Industries</a>
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="demo.html">Demo</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="country-select">
+          <select id="countrySelect" data-country-select aria-label="Select country">
+            <option value="pk">Pakistan</option>
+            <option value="sa">KSA</option>
+            <option value="ae">UAE</option>
+            <option value="om">Oman</option>
+            <option value="gb">United Kingdom</option>
+            <option value="us">USA</option>
+          </select>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="pricing.html">View Pricing</a>
+          <a class="btn btn-primary" href="demo.html">Book Demo</a>
+        </div>
+        <button class="menu-toggle" type="button" data-menu-toggle>Menu</button>
+      </div>
     </header>
 
-    <section class="features">
-        <div class="container">
-            <div class="card">
-                <h3>⚡ Lightning Fast</h3>
-                <p>Loads instantly worldwide so you never lose a potential customer.</p>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">POS software for growing businesses</div>
+            <h1>Run billing, inventory, staff, and reports from one POS platform.</h1>
+            <p class="hero-copy">German POS helps restaurants, salons, marts, hotels, game zones, and gyms manage daily sales, stock, customers, staff, payments, and business reports with industry-specific workflows.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="demo.html">Request a Demo</a>
+              <a class="btn btn-secondary" href="industries.html">Explore Industries</a>
             </div>
-            <div class="card">
-                <h3>🔒 Highly Secure</h3>
-                <p>Protected by industry-grade encryption and secure infrastructure.</p>
+            <div class="trust-row">
+              <span class="trust-pill">Offline-first workflows</span>
+              <span class="trust-pill">Country pricing</span>
+              <span class="trust-pill">Industry workflows</span>
+              <span class="trust-pill">Tax-ready setup</span>
             </div>
-            <div class="card">
-                <h3>📱 Fully Responsive</h3>
-                <p>Looks gorgeous on iPhones, Androids, tablets, and desktop computers.</p>
+          </div>
+
+          <div class="screen-card" aria-label="German POS product dashboard preview">
+            <div class="screen-top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
             </div>
+            <div class="screen-body">
+              <div class="pos-side">
+                <div class="pos-panel">
+                  <h4>Today</h4>
+                  <div class="mini-row"><span>Sales</span><strong>PKR 63,998</strong></div>
+                  <div class="mini-row"><span>Transactions</span><strong>47</strong></div>
+                  <div class="mini-row"><span>Active Users</span><strong>6</strong></div>
+                </div>
+                <div class="pos-panel">
+                  <h4>Quick Actions</h4>
+                  <div class="mini-row"><span>Billing</span><strong>Ready</strong></div>
+                  <div class="mini-row"><span>Staff</span><strong>Tracked</strong></div>
+                  <div class="mini-row"><span>Inventory</span><strong>Tracked</strong></div>
+                </div>
+              </div>
+              <div class="pos-main">
+                <div class="metric-strip">
+                  <div class="metric"><strong>16%</strong><span>Tax</span></div>
+                  <div class="metric"><strong>PKR 9,999</strong><span>Profit</span></div>
+                  <div class="metric"><strong>6</strong><span>Industries</span></div>
+                </div>
+                <div class="pos-panel">
+                  <h4>Industries</h4>
+                  <div class="tile-grid">
+                    <div class="tile">Restaurant</div>
+                    <div class="tile">Salon</div>
+                    <div class="tile">Mart</div>
+                    <div class="tile">Hotel</div>
+                    <div class="tile">Game Zone</div>
+                    <div class="tile">Gym</div>
+                  </div>
+                </div>
+                <div class="pos-panel">
+                  <h4>Reports</h4>
+                  <div class="mini-row"><span>Profit tracking</span><strong>Live</strong></div>
+                  <div class="mini-row"><span>Profit and loss</span><strong>Ready</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="buy" class="pricing">
-        <h3>Join the Waitlist</h3>
-        <p>Be the first to know when we launch and get an exclusive 50% discount.</p>
-        <div class="price">$19/mo</div>
-        <form>
-            <input type="email" placeholder="Enter your email address" required>
-            <br>
-            <input type="submit" value="Secure Your Spot" class="cta-btn" style="border:none; cursor:pointer; width:85%;">
-        </form>
-    </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Industry-specific POS systems under one German POS brand.</h2>
+              <p>Start with the workflows your business needs, then add stock, staff, reports, and multi-branch controls as you grow.</p>
+            </div>
+            <a class="btn btn-secondary" href="industries.html">See Industries</a>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <div class="icon-chip">01</div>
+              <h3>Fast billing and payments</h3>
+              <p>Create sales, apply discounts, collect payments, print receipts, and manage due balances for different business types.</p>
+            </article>
+            <article class="card">
+              <div class="icon-chip">02</div>
+              <h3>Business-specific workflows</h3>
+              <p>Use KOT for restaurants, appointments for salons, barcode checkout for marts, memberships for gyms, and sessions for game zones.</p>
+            </article>
+            <article class="card">
+              <div class="icon-chip">03</div>
+              <h3>Inventory and reporting</h3>
+              <p>Track stock, purchases, suppliers, expenses, staff, customer dues, profit, and sales performance from one admin system.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <section class="section section-alt">
+        <div class="container grid-2">
+          <div>
+            <div class="eyebrow">Country-ready</div>
+            <h2>Country pricing with local business workflows.</h2>
+            <p class="hero-copy">German POS supports country-specific pricing, local tax setup where applicable, cashier access control, staff tracking, inventory, and clear business reports.</p>
+            <ul class="feature-list">
+              <li>Restaurants, salons, marts, hotels, game zones, and gyms.</li>
+              <li>Payment tax setup, receipt controls, and country-specific package prices.</li>
+              <li>Sales, item, customer due, shift, expense, stock, staff, and profit reports.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Popular starting point</h3>
+            <div class="price">From PKR 2,999 <small>/ month</small></div>
+            <p>Choose your business type and country to see the most relevant POS packages.</p>
+            <ul class="feature-list">
+              <li>Industry-specific billing workflow</li>
+              <li>Inventory or service controls</li>
+              <li>Staff access and daily reports</li>
+              <li>Country-specific pricing</li>
+            </ul>
+            <a class="btn btn-primary" href="pricing.html">View Packages</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Ready to see German POS in action?</h2>
+              <p>Book a product walkthrough for your restaurant, salon, mart, hotel, game zone, or gym.</p>
+            </div>
+            <a class="btn btn-primary" href="demo.html">Book Demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/app-icon.png" alt="" /><span>German POS</span></a>
+        <p>German POS is a multi-industry POS platform for restaurants, salons, marts, hotels, game zones, and gyms with billing, inventory, staff, customers, payments, and reports.</p>
+      </div>
+      <div class="footer-col"><h4>Industries</h4><a href="restaurant-pos.html">Restaurant POS</a><a href="salon-pos.html">Salon POS</a><a href="mart-pos.html">Mart POS</a><a href="hotel-pos.html">Hotel POS</a><a href="game-zone-pos.html">Game Zone POS</a><a href="gym-pos.html">Gym POS</a></div>
+      <div class="footer-col"><h4>Platform</h4><a href="how-it-works.html">How it works</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="pos-ecosystem.html">POS ecosystem</a><a href="customer-stories.html">Customer stories</a></div>
+      <div class="footer-col"><h4>Solutions</h4><a href="enterprise-pos.html">Enterprise POS</a><a href="startup-pos.html">Startup POS</a><a href="fbr-integration.html">Tax and fiscal setup</a><a href="custom-pos-solutions.html">Custom POS solutions</a></div>
+      <div class="footer-col"><h4>Support</h4><a href="support.html">Customer support</a><a href="faq.html">FAQs</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms of use</a></div>
+      <div class="footer-col"><h4>Sales</h4><a href="sales.html">Talk with sales</a><a href="demo.html">Book a meeting</a><a href="contact.html">Contact us</a><a href="pos-comparison.html">POS comparison</a><a href="cloud-pos.html">Cloud POS</a><a href="manual-billing-vs-pos.html">Manual billing vs POS</a></div>
+    </div>
+    <div class="container footer-locations">
+      <div><h4>Pakistan</h4><p>Sales and onboarding for Islamabad, Lahore, Karachi, Faisalabad, Multan, Rawalpindi, and nearby cities.</p></div>
+      <div><h4>Contact</h4><p>WhatsApp: +92 300 0000000</p><p>Email: hello@germanpos.com</p></div>
+      <div><h4>Markets we serve</h4><p>Pakistan, KSA, UAE, Oman, United Kingdom, and USA through remote onboarding.</p></div>
+    </div>
+    <div class="container footer-bottom"><span>&copy; 2026 German POS. All rights reserved.</span><span>POS software for service, retail, hospitality, and entertainment businesses.</span></div>
+  </footer>
+  </div>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
