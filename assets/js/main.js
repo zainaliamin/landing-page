@@ -1,4 +1,7 @@
 (() => {
+  const whatsappNumber = '923295302560';
+  const displayPhone = '+92 329 5302560';
+
   const countries = {
     pk: {
       name: 'Pakistan',
@@ -279,10 +282,30 @@
     showToast.timer = setTimeout(() => toast.classList.remove('is-visible'), 3200);
   }
 
+  function openWhatsApp(message) {
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener');
+  }
+
+  const whatsappButton = document.createElement('a');
+  whatsappButton.className = 'whatsapp-float';
+  whatsappButton.href = `https://wa.me/${whatsappNumber}`;
+  whatsappButton.target = '_blank';
+  whatsappButton.rel = 'noopener';
+  whatsappButton.setAttribute('aria-label', `Chat with German POS on WhatsApp at ${displayPhone}`);
+  whatsappButton.innerHTML = '<svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16.04 3.2A12.7 12.7 0 0 0 5.2 22.5L3.6 28.8l6.45-1.55A12.72 12.72 0 1 0 16.04 3.2Zm0 2.35a10.35 10.35 0 1 1-5.3 19.24l-.42-.25-3.2.77.8-3.1-.28-.44A10.35 10.35 0 0 1 16.04 5.55Zm-4.5 4.7c-.23 0-.6.08-.92.45-.32.36-1.2 1.18-1.2 2.87s1.23 3.32 1.4 3.55c.17.23 2.38 3.8 5.9 5.18 2.92 1.15 3.52.92 4.15.86.64-.06 2.05-.84 2.34-1.65.29-.8.29-1.5.2-1.65-.08-.15-.31-.23-.65-.4-.34-.17-2.02-1-2.33-1.11-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.23-.4.25-.74.08-.34-.17-1.43-.53-2.72-1.68-1-.9-1.68-2.02-1.88-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.08-.17-.77-1.85-1.05-2.54-.28-.66-.56-.57-.77-.58l-.66-.01Z"/></svg>';
+  document.body.appendChild(whatsappButton);
+
   document.querySelectorAll('form[data-demo-form], form[data-contact-form]').forEach(form => {
     form.addEventListener('submit', event => {
       event.preventDefault();
-      showToast('Thanks. We will contact you shortly.');
+      const formType = form.matches('[data-demo-form]') ? 'Demo request' : 'Contact request';
+      const fields = Array.from(new FormData(form).entries())
+        .filter(([, value]) => String(value).trim())
+        .map(([key, value]) => `${key}: ${value}`)
+        .join('\n');
+      openWhatsApp(`German POS ${formType}\n\n${fields}`);
+      showToast(`Opening WhatsApp at ${displayPhone}.`);
       form.reset();
     });
   });
