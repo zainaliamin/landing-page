@@ -64,7 +64,7 @@
       compliance: 'Tax or compliance setup: from OMR 6/month where applicable.'
     },
     gb: {
-      name: 'United Kingdom',
+      name: 'UK',
       currency: 'GBP',
       prices: {
         restaurant: ['GBP 49', 'GBP 79', 'GBP 119'],
@@ -77,6 +77,21 @@
       setup: 'Setup and staff training: from GBP 299.',
       device: 'Additional device or terminal: GBP 15/month.',
       compliance: 'Tax or compliance setup: from GBP 15/month where applicable.'
+    },
+    eu: {
+      name: 'Europe',
+      currency: 'EUR',
+      prices: {
+        restaurant: ['EUR 55', 'EUR 89', 'EUR 139'],
+        salon: ['EUR 45', 'EUR 79', 'EUR 129'],
+        mart: ['EUR 65', 'EUR 109', 'EUR 169'],
+        hotel: ['EUR 119', 'EUR 209', 'EUR 349'],
+        gamezone: ['EUR 49', 'EUR 89', 'EUR 149'],
+        gym: ['EUR 55', 'EUR 89', 'EUR 149']
+      },
+      setup: 'Setup and staff training: from EUR 329.',
+      device: 'Additional device or terminal: EUR 19/month.',
+      compliance: 'Tax or compliance setup: from EUR 19/month where applicable.'
     },
     us: {
       name: 'USA',
@@ -175,9 +190,9 @@
   const params = new URLSearchParams(window.location.search);
   const requestedCountry = params.get('country');
   const requestedIndustry = params.get('industry');
-  const savedCountry = requestedCountry || localStorage.getItem('germanPosCountry') || 'pk';
+  const savedCountry = requestedCountry || localStorage.getItem('germanPosCountry') || 'us';
   const savedIndustry = requestedIndustry || localStorage.getItem('germanPosIndustry') || 'restaurant';
-  const activeCountry = countries[savedCountry] ? savedCountry : 'pk';
+  const activeCountry = countries[savedCountry] ? savedCountry : 'us';
   const activeIndustry = industries[savedIndustry] ? savedIndustry : 'restaurant';
 
   function renderFeatureList(list, features) {
@@ -239,7 +254,7 @@
   if (countrySelect) {
     countrySelect.value = activeCountry;
     countrySelect.addEventListener('change', () => {
-      const nextCountry = countries[countrySelect.value] ? countrySelect.value : 'pk';
+      const nextCountry = countries[countrySelect.value] ? countrySelect.value : 'us';
       localStorage.setItem('germanPosCountry', nextCountry);
       syncPricing();
     });
@@ -263,11 +278,48 @@
     });
   }
 
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', event => {
+      event.stopPropagation();
+      const isOpen = dropdown.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      dropdown.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', event => {
+    document.querySelectorAll('.nav-dropdown.is-open').forEach(dropdown => {
+      if (dropdown.contains(event.target)) return;
+      dropdown.classList.remove('is-open');
+      const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    document.querySelectorAll('.nav-dropdown.is-open').forEach(dropdown => {
+      dropdown.classList.remove('is-open');
+      const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .nav-industry-links a').forEach(link => {
+  document.querySelectorAll('.nav-links a').forEach(link => {
     const href = link.getAttribute('href') || '';
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('is-active');
+      const dropdown = link.closest('.nav-dropdown');
+      const trigger = dropdown && dropdown.querySelector('.nav-dropdown-trigger');
+      if (trigger) trigger.classList.add('is-active');
     }
   });
 

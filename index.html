@@ -15,22 +15,7 @@
       "name": "German POS",
       "url": "https://germanpos.com",
       "logo": "https://germanpos.com/assets/images/app-icon.png",
-      "email": "hello@germanpos.com",
-      "telephone": "+92 329 5302560",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+92 329 5302560",
-          "contactType": "sales and support",
-          "availableLanguage": [
-            "en",
-            "ur"
-          ]
-        }
-      ],
-      "sameAs": [
-        "https://wa.me/923295302560"
-      ]
+      "email": "hello@germanpos.com"
     }
   </script>
   <script type="application/ld+json">
@@ -52,24 +37,25 @@
     <div class="container nav">
       <a class="brand" href="index.html"><img src="assets/images/app-icon.png" alt="German POS logo" /><span>German POS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="industries.html">Industries</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Industries</button>
+          <div class="nav-dropdown-menu" aria-label="Industries">
+            <a href="restaurant-pos.html">Restaurant POS</a>
+            <a href="salon-pos.html">Salon POS</a>
+            <a href="mart-pos.html">Mart POS</a>
+            <a href="hotel-pos.html">Hotel POS</a>
+            <a href="game-zone-pos.html">Game Zone POS</a>
+            <a href="gym-pos.html">Gym POS</a>
+            <a class="nav-dropdown-all" href="industries.html">All Industries</a>
+          </div>
+        </div>
         <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="demo.html">Book Demo</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="country-select"><select id="countrySelect" data-country-select aria-label="Select country"><option value="pk">Pakistan</option><option value="sa">KSA</option><option value="ae">UAE</option><option value="om">Oman</option><option value="gb">United Kingdom</option><option value="us">USA</option></select></div>
+      <div class="country-select"><select id="countrySelect" data-country-select aria-label="Select country"><option value="us">USA</option><option value="eu">Europe</option><option value="gb">UK</option><option value="ae">UAE</option><option value="sa">KSA</option><option value="om">Oman</option><option value="pk">Pakistan</option></select></div>
       <div class="nav-cta"><a class="btn btn-secondary" href="pricing.html">View Pricing</a><a class="btn btn-primary" href="demo.html">Book Demo</a></div>
       <button class="menu-toggle" type="button" data-menu-toggle>Menu</button>
     </div>
-    <nav class="container nav-industry-links" aria-label="Industry navigation">
-      <a href="restaurant-pos.html">Restaurant POS</a>
-      <a href="salon-pos.html">Salon POS</a>
-      <a href="mart-pos.html">Mart POS</a>
-      <a href="hotel-pos.html">Hotel POS</a>
-      <a href="game-zone-pos.html">Game Zone POS</a>
-      <a href="gym-pos.html">Gym POS</a>
-    </nav>
   </header>
 
     <main>
@@ -99,7 +85,7 @@
               <div class="pos-side">
                 <div class="pos-panel">
                   <h4>Today</h4>
-                  <div class="mini-row"><span>Sales</span><strong>PKR 63,998</strong></div>
+                  <div class="mini-row"><span>Sales</span><strong>USD 1,248</strong></div>
                   <div class="mini-row"><span>Transactions</span><strong>47</strong></div>
                   <div class="mini-row"><span>Active Users</span><strong>6</strong></div>
                 </div>
@@ -113,7 +99,7 @@
               <div class="pos-main">
                 <div class="metric-strip">
                   <div class="metric"><strong>16%</strong><span>Tax</span></div>
-                  <div class="metric"><strong>PKR 9,999</strong><span>Profit</span></div>
+                  <div class="metric"><strong>USD 249</strong><span>Profit</span></div>
                   <div class="metric"><strong>6</strong><span>Industries</span></div>
                 </div>
                 <div class="pos-panel">
@@ -165,26 +151,84 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Industry-specific POS systems under one German POS brand.</h2>
-              <p>Start with the workflows your business needs, then add stock, staff, reports, and multi-branch controls as you grow.</p>
+              <h2>Core POS features for daily operations.</h2>
+              <p>German POS keeps the front counter, back office, staff, inventory, and reporting workflow connected.</p>
+            </div>
+            <a class="btn btn-secondary" href="features.html">View Features</a>
+          </div>
+          <div class="grid-3">
+            <article class="card"><div class="icon-chip">B</div><h3>Billing and payments</h3><p>Create sales, apply discounts, handle dues, accept payment methods, and print receipts for different business types.</p></article>
+            <article class="card"><div class="icon-chip">I</div><h3>Inventory and suppliers</h3><p>Track stock, purchases, suppliers, low stock, item movement, unit conversion, and inventory reporting.</p></article>
+            <article class="card"><div class="icon-chip">A</div><h3>Staff access</h3><p>Control cashier users, roles, permissions, staff records, salary details, shift activity, and accountability.</p></article>
+            <article class="card"><div class="icon-chip">C</div><h3>Customers and dues</h3><p>Keep customer profiles, contact details, balances, settlements, membership records, and repeat-visit context.</p></article>
+            <article class="card"><div class="icon-chip">T</div><h3>Tax and receipts</h3><p>Configure payment taxes, receipt content, invoice details, fiscal settings, and local compliance workflows where applicable.</p></article>
+            <article class="card"><div class="icon-chip">R</div><h3>Reports</h3><p>Review sales, items, shifts, expenses, inventory, profit, customers, suppliers, and staff performance.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>How German POS works.</h2>
+              <p>Start with your industry workflow, configure the operating rules, then use German POS for sales, control, and reporting.</p>
+            </div>
+            <a class="btn btn-secondary" href="how-it-works.html">How It Works</a>
+          </div>
+          <div class="grid-3">
+            <article class="card"><div class="icon-chip">1</div><h3>Choose your industry</h3><p>Select restaurant, salon, mart, hotel, game zone, or gym workflows so the system matches how your team sells.</p></article>
+            <article class="card"><div class="icon-chip">2</div><h3>Configure your operation</h3><p>Add items, services, prices, staff users, taxes, receipt rules, inventory, suppliers, and customer settings.</p></article>
+            <article class="card"><div class="icon-chip">3</div><h3>Sell and report</h3><p>Use German POS for daily billing, stock control, staff accountability, customer balances, and management reports.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>POS software for every business type.</h2>
+              <p>Choose the workflow that matches your operation, then manage billing, stock, staff, customers, and reports from one connected German POS platform.</p>
             </div>
             <a class="btn btn-secondary" href="industries.html">See Industries</a>
           </div>
           <div class="grid-3">
             <article class="card">
-              <div class="icon-chip">01</div>
-              <h3>Fast billing and payments</h3>
-              <p>Create sales, apply discounts, collect payments, print receipts, and manage due balances for different business types.</p>
+              <div class="icon-chip">R</div>
+              <h3>Restaurant POS</h3>
+              <p>Run dine-in, takeaway, delivery, KOT printing, tables, recipes, inventory, and owner reports.</p>
+              <a class="text-link" href="restaurant-pos.html">Restaurant POS</a>
             </article>
             <article class="card">
-              <div class="icon-chip">02</div>
-              <h3>Business-specific workflows</h3>
-              <p>Use KOT for restaurants, appointments for salons, barcode checkout for marts, memberships for gyms, and sessions for game zones.</p>
+              <div class="icon-chip">S</div>
+              <h3>Salon POS</h3>
+              <p>Manage service billing, appointments, staff performance, packages, memberships, product sales, and customers.</p>
+              <a class="text-link" href="salon-pos.html">Salon POS</a>
             </article>
             <article class="card">
-              <div class="icon-chip">03</div>
-              <h3>Inventory and reporting</h3>
-              <p>Track stock, purchases, suppliers, expenses, staff, customer dues, profit, and sales performance from one admin system.</p>
+              <div class="icon-chip">M</div>
+              <h3>Mart POS</h3>
+              <p>Speed up checkout with barcode-ready billing, inventory, suppliers, purchases, cashier reports, and stock alerts.</p>
+              <a class="text-link" href="mart-pos.html">Mart POS</a>
+            </article>
+            <article class="card">
+              <div class="icon-chip">H</div>
+              <h3>Hotel POS</h3>
+              <p>Connect room service, guest billing, restaurant sales, payments, staff access, expenses, and daily reporting.</p>
+              <a class="text-link" href="hotel-pos.html">Hotel POS</a>
+            </article>
+            <article class="card">
+              <div class="icon-chip">G</div>
+              <h3>Game Zone POS</h3>
+              <p>Track sessions, stations, packages, snack counter sales, customer balances, staff users, and daily revenue.</p>
+              <a class="text-link" href="game-zone-pos.html">Game Zone POS</a>
+            </article>
+            <article class="card">
+              <div class="icon-chip">F</div>
+              <h3>Gym POS</h3>
+              <p>Manage member records, renewals, attendance, trainers, dues, packages, product sales, and fitness reports.</p>
+              <a class="text-link" href="gym-pos.html">Gym POS</a>
             </article>
           </div>
         </div>
@@ -194,17 +238,17 @@
         <div class="container grid-2">
           <div>
             <div class="eyebrow">Country-ready</div>
-            <h2>Country pricing with local business workflows.</h2>
-            <p class="hero-copy">German POS supports country-specific pricing, local tax setup where applicable, cashier access control, staff tracking, inventory, and clear business reports.</p>
+            <h2>International POS setup with local pricing.</h2>
+            <p class="hero-copy">German POS supports businesses in the USA, Europe, UK, UAE, KSA, Oman, Pakistan, and other supported markets with country-specific pricing and local setup needs.</p>
             <ul class="feature-list">
-              <li>Restaurants, salons, marts, hotels, game zones, and gyms.</li>
-              <li>Payment tax setup, receipt controls, and country-specific package prices.</li>
-              <li>Sales, item, customer due, shift, expense, stock, staff, and profit reports.</li>
+              <li>Country selector for regional package pricing.</li>
+              <li>Tax, receipt, and compliance configuration where applicable.</li>
+              <li>Remote onboarding for supported markets and business types.</li>
             </ul>
           </div>
           <div class="card">
             <h3>Popular starting point</h3>
-            <div class="price">From PKR 2,999 <small>/ month</small></div>
+            <div class="price">From USD 49 <small>/ month</small></div>
             <p>Choose your business type and country to see the most relevant POS packages.</p>
             <ul class="feature-list">
               <li>Industry-specific billing workflow</li>
@@ -218,6 +262,26 @@
       </section>
 
       <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>German POS FAQs</h2>
+              <p>Quick answers for buyers comparing German POS, pricing, setup, business types, and onboarding.</p>
+            </div>
+            <a class="btn btn-secondary" href="faq.html">View FAQs</a>
+          </div>
+          <div class="grid-3">
+            <article class="card"><h3>Which businesses can use German POS?</h3><p>German POS supports restaurants, salons, marts, hotels, game zones, gyms, and related service or retail businesses.</p></article>
+            <article class="card"><h3>Can pricing change by country?</h3><p>Yes. Use the country selector to view package prices for supported countries and request a quote for larger setups.</p></article>
+            <article class="card"><h3>Does German POS support inventory?</h3><p>Yes. You can manage items, stock, suppliers, purchases, low stock alerts, and inventory reports depending on your package.</p></article>
+            <article class="card"><h3>Can staff access be controlled?</h3><p>Yes. German POS supports users, roles, permissions, cashier workflows, and staff accountability tools.</p></article>
+            <article class="card"><h3>Is onboarding remote?</h3><p>Demo scheduling, setup guidance, implementation, and support can be handled online for supported markets.</p></article>
+            <article class="card"><h3>Can I book a product walkthrough?</h3><p>Yes. Book a German POS demo to review your workflow, business type, pricing, and setup requirements.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
         <div class="container">
           <div class="section-head">
             <div>
@@ -240,12 +304,12 @@
       <div class="footer-col"><h4>Solutions</h4><a href="enterprise-pos.html">Enterprise POS</a><a href="startup-pos.html">Startup POS</a><a href="fbr-integration.html">Tax and fiscal setup</a><a href="custom-pos-solutions.html">Custom POS solutions</a><a href="cloud-pos.html">Cloud POS</a><a href="pos-comparison.html">POS comparison</a></div>
       <div class="footer-col"><h4>Support</h4><a href="support.html">Customer support</a><a href="faq.html">FAQs</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms of use</a></div>
       <div class="footer-col"><h4>Sales</h4><a href="demo.html">Book Demo</a><a href="sales.html">Talk with sales</a><a href="contact.html">Contact German POS</a><a href="restaurant-pos-guide.html">Restaurant POS guide</a><a href="manual-billing-vs-pos.html">Manual billing vs POS</a></div>
-      <div class="footer-col"><h4>Countries</h4><a href="pricing.html?country=pk">POS pricing Pakistan</a><a href="pricing.html?country=sa">POS pricing KSA</a><a href="pricing.html?country=ae">POS pricing UAE</a><a href="pricing.html?country=om">POS pricing Oman</a><a href="pricing.html?country=gb">POS pricing UK</a><a href="pricing.html?country=us">POS pricing USA</a></div>
+      <div class="footer-col"><h4>Countries</h4><a href="pricing.html?country=us">POS pricing USA</a><a href="pricing.html?country=eu">POS pricing Europe</a><a href="pricing.html?country=gb">POS pricing UK</a><a href="pricing.html?country=ae">POS pricing UAE</a><a href="pricing.html?country=sa">POS pricing KSA</a><a href="pricing.html?country=om">POS pricing Oman</a><a href="pricing.html?country=pk">POS pricing Pakistan</a></div>
     </div>
     <div class="container footer-locations">
-      <div><h4>Contact</h4><p>WhatsApp: +92 329 5302560</p><p>Email: hello@germanpos.com</p></div>
+      <div><h4>Global contact</h4><p>Email: hello@germanpos.com</p><p>WhatsApp demo scheduling for supported markets.</p></div>
       <div><h4>Remote onboarding</h4><p>Demo scheduling, implementation, and support are handled online for supported markets.</p></div>
-      <div><h4>Public pages</h4><p><a href="sitemap.xml">XML sitemap</a></p><p><a href="robots.txt">Robots.txt</a></p></div>
+      <div><h4>Website links</h4><p><a href="sitemap.html">Website sitemap</a></p><p><a href="privacy-policy.html">Privacy policy</a></p></div>
     </div>
     <div class="container footer-bottom"><span>&copy; 2026 German POS. All rights reserved.</span><span>POS software for service, retail, hospitality, and entertainment businesses.</span></div>
   </footer>

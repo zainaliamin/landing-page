@@ -40,25 +40,27 @@
     <div class="container nav">
       <a class="brand" href="index.html"><img src="assets/images/app-icon.png" alt="German POS logo" /><span>German POS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="industries.html">Industries</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Industries</button>
+          <div class="nav-dropdown-menu" aria-label="Industries">
+            <a href="restaurant-pos.html">Restaurant POS</a>
+            <a href="salon-pos.html">Salon POS</a>
+            <a href="mart-pos.html">Mart POS</a>
+            <a href="hotel-pos.html">Hotel POS</a>
+            <a href="game-zone-pos.html">Game Zone POS</a>
+            <a href="gym-pos.html">Gym POS</a>
+            <a class="nav-dropdown-all" href="industries.html">All Industries</a>
+          </div>
+        </div>
         <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="demo.html">Book Demo</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="country-select"><select id="countrySelect" data-country-select aria-label="Select country"><option value="pk">Pakistan</option><option value="sa">KSA</option><option value="ae">UAE</option><option value="om">Oman</option><option value="gb">United Kingdom</option><option value="us">USA</option></select></div>
+      <div class="country-select"><select id="countrySelect" data-country-select aria-label="Select country"><option value="us">USA</option><option value="eu">Europe</option><option value="gb">UK</option><option value="ae">UAE</option><option value="sa">KSA</option><option value="om">Oman</option><option value="pk">Pakistan</option></select></div>
       <div class="nav-cta"><a class="btn btn-secondary" href="pricing.html">View Pricing</a><a class="btn btn-primary" href="demo.html">Book Demo</a></div>
       <button class="menu-toggle" type="button" data-menu-toggle>Menu</button>
     </div>
-    <nav class="container nav-industry-links" aria-label="Industry navigation">
-      <a href="restaurant-pos.html">Restaurant POS</a>
-      <a href="salon-pos.html">Salon POS</a>
-      <a href="mart-pos.html">Mart POS</a>
-      <a href="hotel-pos.html">Hotel POS</a>
-      <a href="game-zone-pos.html">Game Zone POS</a>
-      <a href="gym-pos.html">Gym POS</a>
-    </nav>
   </header>
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container breadcrumb-inner"><a href="index.html">Home</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span aria-current="page">Resources</span></div></nav>
   <main>
     <section class="hero"><div class="container"><div class="eyebrow">Learn POS</div><h1>Restaurant POS Guide</h1><p class="hero-copy">A good POS is not only a billing screen. It should help your restaurant reduce mistakes, speed up service, control stock, and understand profit.</p></div></section>
     <section class="section"><div class="container grid-2">
@@ -77,12 +79,12 @@
       <div class="footer-col"><h4>Solutions</h4><a href="enterprise-pos.html">Enterprise POS</a><a href="startup-pos.html">Startup POS</a><a href="fbr-integration.html">Tax and fiscal setup</a><a href="custom-pos-solutions.html">Custom POS solutions</a><a href="cloud-pos.html">Cloud POS</a><a href="pos-comparison.html">POS comparison</a></div>
       <div class="footer-col"><h4>Support</h4><a href="support.html">Customer support</a><a href="faq.html">FAQs</a><a href="privacy-policy.html">Privacy policy</a><a href="terms.html">Terms of use</a></div>
       <div class="footer-col"><h4>Sales</h4><a href="demo.html">Book Demo</a><a href="sales.html">Talk with sales</a><a href="contact.html">Contact German POS</a><a href="restaurant-pos-guide.html">Restaurant POS guide</a><a href="manual-billing-vs-pos.html">Manual billing vs POS</a></div>
-      <div class="footer-col"><h4>Countries</h4><a href="pricing.html?country=pk">POS pricing Pakistan</a><a href="pricing.html?country=sa">POS pricing KSA</a><a href="pricing.html?country=ae">POS pricing UAE</a><a href="pricing.html?country=om">POS pricing Oman</a><a href="pricing.html?country=gb">POS pricing UK</a><a href="pricing.html?country=us">POS pricing USA</a></div>
+      <div class="footer-col"><h4>Countries</h4><a href="pricing.html?country=us">POS pricing USA</a><a href="pricing.html?country=eu">POS pricing Europe</a><a href="pricing.html?country=gb">POS pricing UK</a><a href="pricing.html?country=ae">POS pricing UAE</a><a href="pricing.html?country=sa">POS pricing KSA</a><a href="pricing.html?country=om">POS pricing Oman</a><a href="pricing.html?country=pk">POS pricing Pakistan</a></div>
     </div>
     <div class="container footer-locations">
-      <div><h4>Contact</h4><p>WhatsApp: +92 329 5302560</p><p>Email: hello@germanpos.com</p></div>
+      <div><h4>Global contact</h4><p>Email: hello@germanpos.com</p><p>WhatsApp demo scheduling for supported markets.</p></div>
       <div><h4>Remote onboarding</h4><p>Demo scheduling, implementation, and support are handled online for supported markets.</p></div>
-      <div><h4>Public pages</h4><p><a href="sitemap.xml">XML sitemap</a></p><p><a href="robots.txt">Robots.txt</a></p></div>
+      <div><h4>Website links</h4><p><a href="sitemap.html">Website sitemap</a></p><p><a href="privacy-policy.html">Privacy policy</a></p></div>
     </div>
     <div class="container footer-bottom"><span>&copy; 2026 German POS. All rights reserved.</span><span>POS software for service, retail, hospitality, and entertainment businesses.</span></div>
   </footer>
