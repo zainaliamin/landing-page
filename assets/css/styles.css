@@ -103,6 +103,30 @@ img {
   color: #9a3412;
 }
 
+.nav-industry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 0 12px;
+}
+
+.nav-industry-links a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: #374151;
+  padding: 5px 10px;
+  font-size: .82rem;
+  font-weight: 800;
+}
+
+.nav-industry-links a:hover,
+.nav-industry-links a.is-active {
+  border-color: #fed7aa;
+  background: var(--orange-light);
+  color: #9a3412;
+}
+
 .nav-cta {
   display: flex;
   gap: 10px;
@@ -419,6 +443,28 @@ h1 {
   color: var(--muted);
 }
 
+.popular-links {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.popular-links a {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: #374151;
+  padding: 13px 14px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .04);
+}
+
+.popular-links a:hover {
+  border-color: #fed7aa;
+  background: var(--orange-light);
+  color: #9a3412;
+}
+
 h2 {
   font-size: clamp(2rem, 4vw, 3.1rem);
 }
@@ -605,8 +651,8 @@ textarea:focus {
 
 .footer-main {
   display: grid;
-  grid-template-columns: minmax(240px, 1.45fr) repeat(5, minmax(120px, 1fr));
-  gap: 28px;
+  grid-template-columns: minmax(240px, 1.6fr) repeat(6, minmax(112px, 1fr));
+  gap: 22px;
   align-items: start;
 }
 
@@ -729,7 +775,8 @@ textarea:focus {
 @media (max-width: 920px) {
   .hero-grid,
   .grid-3,
-  .grid-2 {
+  .grid-2,
+  .popular-links {
     grid-template-columns: 1fr;
   }
 
@@ -759,7 +806,8 @@ textarea:focus {
   }
 
   .nav-links,
-  .nav-cta {
+  .nav-cta,
+  .nav-industry-links {
     display: none;
   }
 
@@ -785,6 +833,20 @@ textarea:focus {
     right: 16px;
     top: 72px;
     display: grid;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  body.nav-open .nav-industry-links {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 282px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     border: 1px solid var(--line);
     border-radius: 16px;
     background: #fff;

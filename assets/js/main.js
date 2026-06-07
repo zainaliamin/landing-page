@@ -264,7 +264,7 @@
   }
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  document.querySelectorAll('.nav-links a, .nav-industry-links a').forEach(link => {
     const href = link.getAttribute('href') || '';
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('is-active');
