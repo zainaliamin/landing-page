@@ -246,8 +246,54 @@ img {
   border-radius: 10px;
   background: #fff;
   color: var(--text);
-  padding: 8px 10px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
   font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, .24);
+  outline-offset: 3px;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform .18s ease, top .18s ease, box-shadow .18s ease;
+}
+
+.menu-toggle::before {
+  top: 13px;
+  box-shadow: 0 7px 0 currentColor;
+}
+
+.menu-toggle::after {
+  top: 27px;
+}
+
+body.nav-open .menu-toggle::before {
+  top: 20px;
+  box-shadow: 0 0 0 transparent;
+  transform: rotate(45deg);
+}
+
+body.nav-open .menu-toggle::after {
+  top: 20px;
+  transform: rotate(-45deg);
 }
 
 .btn {
@@ -861,6 +907,27 @@ textarea:focus {
 }
 
 @media (max-width: 920px) {
+  .nav {
+    gap: 10px;
+    min-height: 64px;
+  }
+
+  .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .brand span {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
   .hero-grid,
   .grid-3,
   .grid-2,
@@ -899,7 +966,7 @@ textarea:focus {
   }
 
   .country-select {
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .country-select select,
@@ -912,6 +979,7 @@ textarea:focus {
 
   .menu-toggle {
     display: inline-flex;
+    margin-left: auto;
   }
 
   body.nav-open .nav {
@@ -923,6 +991,7 @@ textarea:focus {
   body.nav-open .nav-links {
     order: 4;
     display: grid;
+    gap: 2px;
     width: 100%;
     border: 1px solid var(--line);
     border-radius: 16px;
@@ -941,6 +1010,15 @@ textarea:focus {
 
   body.nav-open .nav-cta .btn {
     width: 100%;
+  }
+
+  .nav-links > a,
+  .nav-dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+    min-height: 42px;
+    padding: 10px 12px;
+    text-align: left;
   }
 
   .nav-dropdown-menu {
@@ -975,6 +1053,17 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .nav {
+    gap: 6px;
+  }
+
+  .country-select select,
+  .business-select select {
+    min-width: 92px;
+    max-width: 98px;
+    padding: 8px 24px 8px 8px;
+  }
+
   .eyebrow {
     font-size: .5rem;
     padding: 3px 6px;
@@ -995,5 +1084,18 @@ textarea:focus {
   .whatsapp-float svg {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand span {
+    max-width: 82px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
   }
 }

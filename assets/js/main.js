@@ -272,11 +272,24 @@
   syncPricing();
 
   const toggle = document.querySelector('[data-menu-toggle]');
+  function setMobileNav(isOpen) {
+    document.body.classList.toggle('nav-open', isOpen);
+    if (!toggle) return;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  }
+
   if (toggle) {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
     toggle.addEventListener('click', () => {
-      document.body.classList.toggle('nav-open');
+      setMobileNav(!document.body.classList.contains('nav-open'));
     });
   }
+
+  document.querySelectorAll('.nav-links a, .nav-cta a').forEach(link => {
+    link.addEventListener('click', () => setMobileNav(false));
+  });
 
   document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     const trigger = dropdown.querySelector('.nav-dropdown-trigger');
@@ -295,6 +308,10 @@
   });
 
   document.addEventListener('click', event => {
+    if (document.body.classList.contains('nav-open') && !event.target.closest('.topbar')) {
+      setMobileNav(false);
+    }
+
     document.querySelectorAll('.nav-dropdown.is-open').forEach(dropdown => {
       if (dropdown.contains(event.target)) return;
       dropdown.classList.remove('is-open');
@@ -305,11 +322,16 @@
 
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
+    setMobileNav(false);
     document.querySelectorAll('.nav-dropdown.is-open').forEach(dropdown => {
       dropdown.classList.remove('is-open');
       const trigger = dropdown.querySelector('.nav-dropdown-trigger');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 920) setMobileNav(false);
   });
 
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
