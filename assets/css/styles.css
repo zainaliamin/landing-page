@@ -1088,10 +1088,32 @@ textarea:focus {
 }
 
 @media (max-width: 380px) {
+  .nav {
+    gap: 5px;
+  }
+
+  .brand {
+    gap: 6px;
+    flex: 0 0 auto;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
+  }
+
   .brand span {
-    max-width: 82px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: .94rem;
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .country-select select {
+    min-width: 88px;
+    max-width: 94px;
+    padding-left: 7px;
+    padding-right: 22px;
   }
 
   .menu-toggle {
