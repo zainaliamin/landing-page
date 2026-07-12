@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /temporary/
 
 Sitemap: https://germanpos.com/sitemap.xml

@@ -2,157 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://germanpos.com/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://germanpos.com/features.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
+    <loc>https://germanpos.com/about.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://germanpos.com/pricing.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/demo.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
+    <loc>https://germanpos.com/cloud-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://germanpos.com/contact.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/industries.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/restaurant-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/salon-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/mart-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/hotel-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/game-zone-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/gym-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/how-it-works.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/pos-ecosystem.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/customer-stories.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/enterprise-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/startup-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/fbr-integration.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://germanpos.com/custom-pos-solutions.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://germanpos.com/support.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <loc>https://germanpos.com/customer-stories.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/demo.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/enterprise-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://germanpos.com/faq.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://germanpos.com/fbr-integration.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/features.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/game-zone-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/gym-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/hotel-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/how-it-works.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/industries.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/legacy-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/manual-billing-vs-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/mart-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/pos-comparison.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/pos-ecosystem.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/pricing.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://germanpos.com/privacy-policy.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/restaurant-pos-guide.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/restaurant-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/sales.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/salon-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/sitemap.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/startup-pos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://germanpos.com/support.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://germanpos.com/terms.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/sitemap.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/about.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/sales.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/restaurant-pos-guide.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/pos-comparison.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/cloud-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/legacy-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://germanpos.com/manual-billing-vs-pos.html</loc>
-    <lastmod>2026-06-07</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>
