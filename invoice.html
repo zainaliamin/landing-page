@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>GermanPOS — Quotation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --orange: #f97316;
+            --orange-dark: #c2410c;
+            --orange-tint: #fff3e8;
+            --orange-tint-2: #ffe4cc;
+            --ink: #211a13;
+            --ink-soft: #7a6f62;
+            --paper: #fffefb;
+            --page-bg: #e7e1d6;
+            --line: #e6ddcf;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 16px;
+            background: var(--page-bg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            max-width: 100%;
+            background: var(--paper);
+            box-shadow: 0 40px 80px -30px rgba(33, 26, 19, 0.35);
+            padding: 20mm 18mm 16mm;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: "";
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.10), transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Letterhead */
+        .letterhead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand img {
+            width: 46px;
+            height: 46px;
+            border-radius: 11px;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+        }
+
+        .brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 21px;
+            letter-spacing: 0.2px;
+            color: var(--ink);
+        }
+
+        .brand-name span {
+            color: var(--orange);
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: var(--ink-soft);
+            margin-top: 2px;
+        }
+
+        .doc-meta {
+            text-align: right;
+            font-size: 11.5px;
+            color: var(--ink-soft);
+            line-height: 1.7;
+        }
+
+        .doc-meta b {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .hr {
+            height: 1px;
+            background: var(--line);
+            margin: 26px 0 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Title block */
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 26px;
+        }
+
+        h1.doc-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 34px;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .doc-title .accent {
+            color: var(--orange);
+        }
+
+        .eyebrow {
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            color: var(--orange-dark);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .valid-pill {
+            background: var(--orange-tint);
+            color: var(--orange-dark);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        /* Client info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+        }
+
+        .info-field label {
+            display: block;
+            font-size: 9.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--ink-soft);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .info-field .val {
+            font-size: 13px;
+            color: #f97316;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 8px;
+            min-height: 16px;
+            font-weight: 500;
+        }
+
+        /* Intro line */
+        .intro {
+            font-size: 13.5px;
+            line-height: 1.75;
+            color: var(--ink);
+            max-width: 90%;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro b {
+            font-weight: 600;
+        }
+
+        /* Package section */
+        .section-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink);
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .package-card {
+            border: 1.5px solid var(--orange-tint-2);
+            border-radius: 16px;
+            padding: 26px 28px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 22px;
+            background: linear-gradient(180deg, var(--orange-tint) 0%, rgba(255, 243, 232, 0) 60%);
+        }
+
+        .package-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .package-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .package-desc {
+            font-size: 12px;
+            color: var(--ink-soft);
+            margin-top: 4px;
+            max-width: 380px;
+        }
+
+        .package-price {
+            text-align: right;
+        }
+
+        .package-price .amt {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--orange-dark);
+        }
+
+        .package-price .per {
+            font-size: 10.5px;
+            color: var(--ink-soft);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 22px;
+        }
+
+        .feature-list li {
+            font-size: 12px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--ink);
+        }
+
+        .feature-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--orange);
+            border-radius: 3px;
+            opacity: 0.85;
+        }
+
+        .onetime-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 10px 0;
+            border-top: 1px dashed var(--orange-tint-2);
+            margin-top: 16px;
+        }
+
+        .onetime-row span:last-child {
+            font-weight: 600;
+        }
+
+        /* Total highlight */
+        .total-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--ink);
+            color: var(--paper);
+            border-radius: 14px;
+            padding: 20px 26px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+        }
+
+        .total-box .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cfc6b8;
+            margin-bottom: 4px;
+        }
+
+        .total-box .note {
+            font-size: 11px;
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .total-box .amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        /* Terms */
+        .terms-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .terms-cols ul {
+            margin: 0;
+            padding-left: 16px;
+            font-size: 11.5px;
+            line-height: 1.8;
+            color: var(--ink-soft);
+        }
+
+        .terms-cols li b {
+            color: var(--ink);
+        }
+
+        /* Signatures */
+        .sign-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sign-box .name-input {
+            width: 100%;
+            border: none;
+            margin-top: 10px;
+            border-bottom: 1px dashed #000;
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #f97316;
+            padding: 4px 2px 8px;
+            outline: none;
+        }
+
+        .sign-box .name-input::placeholder {
+            color: var(--ink-soft);
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        .sign-box .name-input:focus {
+            border-bottom: 1px dashed var(--orange);
+        }
+
+        .sign-box .line {
+            padding-top: 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--ink-soft);
+        }
+
+        /* Footer */
+        .page-footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-size: 10.5px;
+            color: var(--ink-soft);
+            padding-top: 16px;
+            margin-top: 10px;
+        }
+
+        .page-footer b {
+            color: var(--orange-dark);
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: #fff;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 11px 18px;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 0 10px 24px -8px rgba(249, 115, 22, 0.55);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--orange-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 14px 28px -8px rgba(194, 65, 12, 0.55);
+        }
+
+        .print-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media print {
+
+            html,
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+                width: 210mm;
+            }
+
+            .page {
+                box-shadow: none;
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0;
+                padding: 20mm 18mm 16mm;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            .sign-box .name-input {
+                border-bottom: none;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .terms-cols {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .sign-row {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .page {
+                padding: 8mm 6mm;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .terms-cols {
+                grid-template-columns: 1fr;
+            }
+
+            .sign-row {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            h1.doc-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-btn" onclick="window.print()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save PDF
+    </button>
+
+    <div class="page">
+
+        <div class="letterhead">
+            <div class="brand">
+                <img src="https://germanpos.com/assets/images/app-icon.png" alt="GermanPOS logo">
+                <div>
+                    <div class="brand-name">german<span>POS</span></div>
+                    <div class="brand-sub">Restaurant POS, made simple</div>
+                </div>
+            </div>
+            <div class="doc-meta">
+                hello@germanpos.com<br>
+                germanpos.com
+            </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="title-row">
+            <div>
+                <div class="eyebrow">Quotation</div>
+                <h1 class="doc-title">Your POS <span class="accent">setup</span>, quoted.</h1>
+            </div>
+            <div style="text-align:right;">
+                <div class="doc-meta" style="margin-bottom:10px;">
+                    NO. <b>GP-Q-1442</b><br>
+                    DATE <b id="current-date"></b>
+                </div>
+                <span class="valid-pill">Valid for 7 days</span>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-field">
+                <label>Restaurant Name</label>
+                <input type="text" class="val-input" placeholder="Restaurant Name Here">
+            </div>
+
+            <div class="info-field">
+                <label>Owner</label>
+                <input type="text" class="val-input" placeholder="Name Here">
+            </div>
+
+            <div class="info-field">
+                <label>Phone / WhatsApp</label>
+                <input type="text" class="val-input" placeholder="+92 XXX XXXXXXXX">
+            </div>
+
+            <div class="info-field">
+                <label>Location</label>
+                <input type="text" class="val-input" placeholder="Address Here">
+            </div>
+        </div>
+
+        <p class="intro">Thank you for considering GermanPOS. Below is a quotation for getting your restaurant fully set
+            up on our offline-first billing system.
+        </p>
+
+        <div class="section-heading">Package</div>
+
+        <div class="package-card">
+            <div class="package-top">
+                <div>
+                    <div class="package-name">GermanPOS — Standard License</div>
+                    <div class="package-desc">Offline-first billing built for Pakistani restaurants, licensed per
+                        device.</div>
+                </div>
+                <div class="package-price">
+    <input type="text" class="price-input" value="PKR 12,000">
+    <div class="per">One-Time</div>
+</div>
+            </div>
+            <ul class="feature-list">
+    <li><input type="text" class="feature-input" value="Unlimited bills &amp; menu items"></li>
+    <li><input type="text" class="feature-input" value="Works fully offline, no internet needed"></li>
+    <li><input type="text" class="feature-input" value="JazzCash &amp; Easypaisa payment support"></li>
+    <li><input type="text" class="feature-input" value="Daily sales &amp; item-wise reports"></li>
+    <li><input type="text" class="feature-input" value="Thermal receipt printing"></li>
+    <li><input type="text" class="feature-input" value="WhatsApp support"></li>
+</ul>
+            <div class="onetime-row">
+                <span>One-time setup, menu import &amp; on-site staff training</span>
+                <input type="text" class="setup-price-input" value="PKR 3,000">
+            </div>
+        </div>
+
+        <div class="total-box">
+            <div>
+                <div class="label">Total Due to Start</div>
+                <div class="note"></div>
+            </div>
+            <input type="text" class="total-price-input" value="PKR 15,000">
+        </div>
+
+        <div class="section-heading">Terms</div>
+        <div class="terms-cols">
+            <ul>
+                <li><b>Payment</b> — 50% advance to begin setup, balance one day before go-live day.</li>
+                <li><b>Delivery</b> — Setup completed within 3 working days of confirmation.</li>
+            </ul>
+            <ul>
+                <li><b>Hardware</b> — Printer, cash drawer &amp; scanner quoted separately.</li>
+                <li><b>Licensing</b> — Device-ID bound; contact us to add or move a device.</li>
+            </ul>
+        </div>
+
+        <div class="sign-row">
+            <div class="sign-box">
+                <div class="line">Owner Signature &amp; Date</div>
+                <input type="text" class="name-input" placeholder="">
+            </div>
+            <div class="sign-box">
+                <div class="line">GermanPOS Representative</div><input type="text" class="name-input" placeholder=""
+                    value="Zain Ali - Representative GermanPOS">
+
+            </div>
+        </div>
+
+        <div class="page-footer">
+            Prepared by <b>GermanPOS</b> · hello@germanpos.com · germanpos.com
+        </div>
+
+    </div>
+    <style>
+        .val-input {
+            width: 100%;
+            font-size: 13px;
+            color: #f97316;
+            border: none;
+            border-bottom: 1px solid var(--line);
+            padding: 0 0 8px;
+            min-height: 16px;
+            font-weight: 500;
+            background: transparent;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .val-input::placeholder {
+            color: #f97316;
+            opacity: 1;
+        }
+
+        .val-input:focus {
+            border-bottom: 1px solid var(--orange);
+        }
+
+        .price-input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--orange-dark);
+    border: none;
+    background: transparent;
+    text-align: right;
+    outline: none;
+    width: 140px;
+    padding: 0;
+}
+
+.setup-price-input {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    border: none;
+    background: transparent;
+    text-align: right;
+    outline: none;
+    width: 90px;
+    padding: 0;
+}
+
+.price-input:focus,
+.setup-price-input:focus {
+    border-bottom: 1px dashed var(--orange);
+}
+.total-price-input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--orange);
+    border: none;
+    background: transparent;
+    text-align: right;
+    outline: none;
+    width: 180px;
+    padding: 0;
+}
+
+.total-price-input:focus {
+    border-bottom: 1px dashed var(--orange);
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.feature-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 12px;
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-input:focus {
+    border-bottom: 1px dashed var(--orange);
+}
+    </style>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date();
+
+    const formattedDate = today.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+    });
+
+    document.getElementById("current-date").textContent = formattedDate;
+});
+</script>
+</body>
+
+</html>
