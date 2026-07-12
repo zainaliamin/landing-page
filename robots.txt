@@ -8,5 +8,6 @@ Disallow: /api/
 Disallow: /tmp/
 Disallow: /temp/
 Disallow: /temporary/
+Disallow: /invoice.html
 
 Sitemap: https://germanpos.com/sitemap.xml
