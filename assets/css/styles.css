@@ -1217,11 +1217,13 @@ textarea:focus {
   .nav {
     gap: 6px;
   }
-
+.section {
+    padding: 0 0 68px 0;
+}
   .country-select select,
   .business-select select {
     min-width: 92px;
-    max-width: 98px;
+    max-width: fit-content;
     padding: 8px 24px 8px 8px;
   }
 
