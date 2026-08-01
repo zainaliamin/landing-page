@@ -527,7 +527,21 @@
                 font-size: 26px;
             }
         }
-    </style>
+    
+        [contenteditable="true"] {
+            outline: none;
+            border-bottom: 1px dashed transparent;
+            transition: border-color 0.2s;
+        }
+        [contenteditable="true"]:focus {
+            border-bottom: 1px dashed var(--orange);
+        }
+        @media print {
+            [contenteditable="true"] {
+                border-bottom: none !important;
+            }
+        }
+</style>
 </head>
 
 <body>
@@ -548,11 +562,11 @@
             <div class="brand">
                 <img src="https://germanpos.com/assets/images/app-icon.png" alt="GermanPOS logo">
                 <div>
-                    <div class="brand-name">german<span>POS</span></div>
-                    <div class="brand-sub">Restaurant POS, made simple</div>
+                    <div class="brand-name" contenteditable="true" spellcheck="false">german<span>POS</span></div>
+                    <div class="brand-sub" contenteditable="true" spellcheck="false">Restaurant POS, made simple</div>
                 </div>
             </div>
-            <div class="doc-meta">
+            <div class="doc-meta" contenteditable="true" spellcheck="false">
                 hello@germanpos.com<br>
                 germanpos.com
             </div>
@@ -562,56 +576,56 @@
 
         <div class="title-row">
             <div>
-                <div class="eyebrow">Quotation</div>
-                <h1 class="doc-title">Your POS <span class="accent">setup</span>, quoted.</h1>
+                <div class="eyebrow" contenteditable="true" spellcheck="false">Quotation</div>
+                <h1 class="doc-title" contenteditable="true" spellcheck="false">Your POS <span class="accent">setup</span>, quoted.</h1>
             </div>
             <div style="text-align:right;">
-                <div class="doc-meta" style="margin-bottom:10px;">
+                <div class="doc-meta" contenteditable="true" spellcheck="false" style="margin-bottom:10px;">
                     NO. <b>GP-Q-1442</b><br>
                     DATE <b id="current-date"></b>
                 </div>
-                <span class="valid-pill">Valid for 7 days</span>
+                <span class="valid-pill" contenteditable="true" spellcheck="false">Valid for 7 days</span>
             </div>
         </div>
 
         <div class="info-grid">
             <div class="info-field">
-                <label>Restaurant Name</label>
+                <label contenteditable="true" spellcheck="false">Restaurant Name</label>
                 <input type="text" class="val-input" placeholder="Restaurant Name Here">
             </div>
 
             <div class="info-field">
-                <label>Owner</label>
+                <label contenteditable="true" spellcheck="false">Owner</label>
                 <input type="text" class="val-input" placeholder="Name Here">
             </div>
 
             <div class="info-field">
-                <label>Phone / WhatsApp</label>
+                <label contenteditable="true" spellcheck="false">Phone / WhatsApp</label>
                 <input type="text" class="val-input" placeholder="+92 XXX XXXXXXXX">
             </div>
 
             <div class="info-field">
-                <label>Location</label>
+                <label contenteditable="true" spellcheck="false">Location</label>
                 <input type="text" class="val-input" placeholder="Address Here">
             </div>
         </div>
 
-        <p class="intro">Thank you for considering GermanPOS. Below is a quotation for getting your restaurant fully set
+        <p class="intro" contenteditable="true" spellcheck="false">Thank you for considering GermanPOS. Below is a quotation for getting your restaurant fully set
             up on our offline-first billing system.
         </p>
 
-        <div class="section-heading">Package</div>
+        <div class="section-heading" contenteditable="true" spellcheck="false">Package</div>
 
         <div class="package-card">
             <div class="package-top">
                 <div>
-                    <div class="package-name">GermanPOS — Standard License</div>
-                    <div class="package-desc">Offline-first billing built for Pakistani restaurants, licensed per
+                    <div class="package-name" contenteditable="true" spellcheck="false">GermanPOS — Standard License</div>
+                    <div class="package-desc" contenteditable="true" spellcheck="false">Offline-first billing built for Pakistani restaurants, licensed per
                         device.</div>
                 </div>
                 <div class="package-price">
                     <input type="text" class="price-input" value="PKR 12,000">
-                    <div class="per">One-Time</div>
+                    <div class="per" contenteditable="true" spellcheck="false">One-Time</div>
                 </div>
             </div>
             <ul class="feature-list">
@@ -623,28 +637,28 @@
                 <li><input type="text" class="feature-input" value="WhatsApp support"></li>
             </ul>
             <div class="onetime-row">
-                <span>One-time setup, menu import &amp; on-site staff training</span>
+                <span contenteditable="true" spellcheck="false">One-time setup, menu import &amp; on-site staff training</span>
                 <input type="text" class="setup-price-input" value="PKR 3,000">
             </div>
         </div>
 
         <div class="total-box">
             <div>
-                <div class="label">Total Due to Start</div>
-                <div class="note"></div>
+                <div class="label" contenteditable="true" spellcheck="false">Total Due to Start</div>
+                <div class="note" contenteditable="true" spellcheck="false"></div>
             </div>
             <input type="text" class="total-price-input" value="PKR 15,000">
         </div>
 
-        <div class="section-heading">Terms</div>
+        <div class="section-heading" contenteditable="true" spellcheck="false">Terms</div>
         <div class="terms-cols">
             <ul>
-                <li><b>Payment</b> — 50% advance to begin setup, balance one day before go-live day.</li>
-                <li><b>Delivery</b> — Setup completed within 3 working days of confirmation.</li>
+                <li contenteditable="true" spellcheck="false"><b>Payment</b> — 50% advance to begin setup, balance one day before go-live day.</li>
+                <li contenteditable="true" spellcheck="false"><b>Delivery</b> — Setup completed within 3 working days of confirmation.</li>
             </ul>
             <ul>
-                <li><b>Hardware</b> — Printer, cash drawer &amp; scanner quoted separately.</li>
-                <li><b>Licensing</b> — Device-ID bound; contact us to add or move a device.</li>
+                <li contenteditable="true" spellcheck="false"><b>Hardware</b> — Printer, cash drawer &amp; scanner quoted separately.</li>
+                <li contenteditable="true" spellcheck="false"><b>Licensing</b> — Device-ID bound; contact us to add or move a device.</li>
             </ul>
         </div>
 
@@ -652,7 +666,7 @@
 
             <!-- Customer Signature -->
             <div class="sign-box">
-                <div class="line">Owner Signature &amp; Date</div>
+                <div class="line" contenteditable="true" spellcheck="false">Owner Signature &amp; Date</div>
                 <input type="text" class="name-input" placeholder="">
             </div>
 
@@ -671,7 +685,7 @@
                     </div>
                 </div>
 
-                <div class="line">GermanPOS Representative</div>
+                <div class="line" contenteditable="true" spellcheck="false">GermanPOS Representative</div>
 
                 <input type="text" class="name-input" value="Zain Ali - Representative GermanPOS">
 
@@ -755,7 +769,7 @@
         </style>
 
 
-        <div class="page-footer">
+        <div class="page-footer" contenteditable="true" spellcheck="false">
             Prepared by <b>GermanPOS</b> · hello@germanpos.com · germanpos.com
         </div>
 
